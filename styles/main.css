@@ -1,14 +1,10 @@
 :root {
-	--primary-color: #FFBF00;
-	/* Bright orange color */
-	--hover-color: #E0AC00;
-	/* Hover color */
-	--text-color: #D0D0D1;
-	/* Text color */
-	--background-color: #1D1E20;
-	/* Background color */
-	--navbar-bg: #151618;
-	/* Navbar background */
+	--primary-color: #FFBF00; /* Bright orange color */
+	--hover-color: #E0AC00;   /* Hover color */
+	--text-color: #D0D0D1;    /* Text color */
+	--background-color: #1D1E20; /* Background color */
+	--navbar-bg: #151618;     /* Navbar background */
+	--button-text-color: #151618; /* Text color for buttons */
 }
 
 /* Global Styles */
@@ -20,9 +16,10 @@ body {
 	line-height: 1.5;
 }
 
+/* Navbar */
 .navbar {
 	background-color: var(--navbar-bg);
-	padding: 1rem;
+	padding: 1rem 2rem; /* Slightly wider padding for better aesthetics */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -34,12 +31,14 @@ body {
 	margin: 0 1rem;
 	font-weight: bold;
 	font-size: 1rem;
+	transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar a:hover {
 	color: var(--hover-color);
 }
 
+/* General Section Styles */
 #feature,
 #projects,
 #project-detail,
@@ -52,9 +51,11 @@ body {
 #project-grid,
 .project-card {
 	max-width: 40rem;
-	margin: auto;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
+/* Grid Styles */
 #grid,
 #project-grid {
 	display: grid;
@@ -63,41 +64,65 @@ body {
 	margin: 2rem 0;
 }
 
+#project-grid {
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+	max-width: 1200px;
+	margin: 2rem auto;
+}
+
+/* Headings */
 h2 {
 	font-size: 2.25rem;
 	color: var(--primary-color);
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem; /* Increased spacing */
 }
 
 h3 {
-	font-size: 1.25rem;
+	font-size: 1.5rem; /* Slightly larger for readability */
 	color: var(--text-color);
+	margin-bottom: 1rem;
 }
 
-.cta {
+/* Buttons */
+.cta,
+.page-btn,
+.project-btn,
+.resume-btn {
 	background-color: var(--primary-color);
-	color: #151618;
+	color: var(--button-text-color);
 	font-size: 1rem;
 	padding: 0.75rem 1.5rem;
 	border-radius: 5px;
 	text-decoration: none;
 	font-weight: bold;
-	transition: background-color 0.3s ease;
-	margin: 1rem;
 	display: inline-block;
+	transition: background-color 0.3s ease;
+	margin: 1rem 0.5rem; /* Consistent button spacing */
 }
 
-.cta:hover {
+.cta:hover,
+.page-btn:hover,
+.project-btn:hover,
+.resume-btn:hover {
 	background-color: var(--hover-color);
 }
 
+/* Project Section */
 .project-card {
 	background-color: var(--navbar-bg);
-	padding: 2rem;
+	padding: 1.5rem;
 	border-radius: 8px;
 	text-align: center;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+.project-card:hover {
+	transform: translateY(-5px); /* Slight lift on hover */
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Buttons in Projects */
 .project-buttons {
 	display: flex;
 	justify-content: center;
@@ -107,19 +132,8 @@ h3 {
 
 .page-btn,
 .project-btn {
-	background-color: var(--primary-color);
-	color: #151618;
-	padding: 0.5rem;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: bold;
+	padding: 0.5rem 1rem; /* Consistent padding */
 	font-size: 0.9rem;
-	text-align: center;
-	transition: background-color 0.3s ease;
-}
-
-.project-btn:hover {
-	background-color: var(--hover-color);
 }
 
 /* Technical Skills Page */
@@ -130,25 +144,12 @@ h3 {
 	text-align: center;
 }
 
+/* Resume Section */
 .resume-section {
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
-.resume-btn {
-	background-color: var(--primary-color);
-	color: #151618;
-	font-size: 1.1rem;
-	padding: 0.75rem 1.5rem;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: bold;
-	transition: background-color 0.3s ease;
-}
-
-.resume-btn:hover {
-	background-color: var(--hover-color);
-}
-
+/* Skills Grid */
 #skills-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -157,11 +158,17 @@ h3 {
 	margin: 0 auto;
 }
 
+/* Skills Card */
 .skills-card {
 	background-color: var(--navbar-bg);
 	padding: 2rem;
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 .skills-card h3 {
@@ -179,6 +186,7 @@ h3 {
 .skills-card li {
 	margin-bottom: 0.5rem;
 	font-size: 1rem;
+	line-height: 1.4;
 }
 
 .skills-card i {
