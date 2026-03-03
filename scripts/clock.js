@@ -22,7 +22,6 @@ const THEME_COLORS = {
   cards: "#444cf7",
   cogs: "#808080",
   cylinder: "#d72d71",
-  iphone: "#fd29a0",
   memories: "#ffffff",
   caterpillars: "#698744",
   photo: "#fd3622"
@@ -106,7 +105,7 @@ function setFormat(newFormat) {
   prevPeriod = null;
   document.documentElement.dataset.format = newFormat;
   toggleFormatBtn.innerText = FORMAT === 12 ? "24" : "12";
-  toggleFormatBtn.setAttribute("aria-label", `Switch to ${FORMAT === 12 ? "24" : "12"}-hour format`);
+  toggleFormatBtn.title = `Switch to ${FORMAT === 12 ? "24" : "12"}-hour format`;
   localStorage.setItem("format", newFormat);
 }
 
@@ -124,10 +123,7 @@ function setTheme(newTheme) {
   localStorage.setItem("theme", newTheme);
   ["theme-btn", "nav-theme-btn"].forEach(function (id) {
     var btn = document.getElementById(id);
-    if (btn) {
-      btn.textContent = newTheme === "light" ? "Dark" : "Light";
-      btn.setAttribute("aria-label", newTheme === "light" ? "Switch to dark mode" : "Switch to light mode");
-    }
+    if (btn) btn.textContent = newTheme === "light" ? "Dark" : "Light";
   });
 }
 

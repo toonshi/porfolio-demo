@@ -12,10 +12,7 @@
     // Keep all theme toggle buttons in sync
     ["nav-theme-btn", "theme-btn"].forEach(function (id) {
       var btn = document.getElementById(id);
-      if (btn) {
-        btn.textContent = theme === "dark" ? "Light" : "Dark";
-        btn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-      }
+      if (btn) btn.textContent = theme === "dark" ? "Light" : "Dark";
     });
   }
 
