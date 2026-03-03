@@ -204,19 +204,32 @@ body {
   color: var(--accent-color);
 }
 
-/* Clock widget area in hero */
-.hero-clock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+/* Clock widget area in hero (Removed from here, now in footer) */
+
+.footer-clock {
+  --clock-height: 24px;
+  --digit-width: 16px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.clock-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
+.footer-clock:hover {
+  transform: scale(1.1);
+}
+
+.footer-clock .clock {
+  background: transparent;
+  padding: 0;
+  gap: 0.15rem;
+}
+
+.footer-clock .col {
+  border: none;
+}
+
+.footer-clock .spacer {
+  font-size: 0.8rem;
 }
 
 /* ===== SECTIONS ===== */

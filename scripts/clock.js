@@ -35,11 +35,15 @@ function startTime() {
     const period = h >= 12 ? 1 : 0;
 
     if (prevPeriod !== period) {
-      formats.forEach((n) => n.classList.remove("active"));
-      formats[period].classList.add("active");
+      if (formats.length > 0) {
+        formats.forEach((n) => n.classList.remove("active"));
+        formats[period].classList.add("active");
+      }
 
-      formatEl.style.transform = `translatey(calc(var(--clock-height) * -${period} + 1px))`;
-      formatEl.style.setProperty("--factor", ((Math.random() - 0.5) * 2).toFixed(2));
+      if (formatEl) {
+        formatEl.style.transform = `translatey(calc(var(--clock-height) * -${period} + 1px))`;
+        formatEl.style.setProperty("--factor", ((Math.random() - 0.5) * 2).toFixed(2));
+      }
 
       let formatPos = period * -1;
       formats.forEach((f) => {
@@ -67,26 +71,30 @@ function startTime() {
   const periodStr = FORMAT === 12 ? (prevPeriod === 0 ? " am" : " pm") : "";
   const isNewMinute = prevTime && prevTime[3] !== newTime[3];
 
-  if (variantSelectEl.value === "photo" && (isNewMinute || forceUpdatePhoto)) {
+  if (variantSelectEl && variantSelectEl.value === "photo" && (isNewMinute || forceUpdatePhoto)) {
     document.documentElement.style.setProperty(
       "--background-image",
       `url("https://picsum.photos/seed/${newTime.join("")}${periodStr.trim()}/1294/965")`
     );
     forceUpdatePhoto = false;
-  } else if (variantSelectEl.value !== "photo") {
+  } else if (variantSelectEl && variantSelectEl.value !== "photo") {
     document.documentElement.style.removeProperty("--background-image");
   }
 
   newTime.forEach((d, i) => {
     if (!prevTime || prevTime[i] !== d) {
-      digits[i].style.transform = `translatey(calc(var(--clock-height) * -${d} + 1px))`;
-      digits[i].style.setProperty("--factor", ((Math.random() - 0.5) * 2).toFixed(2));
+      if (digits[i]) {
+        digits[i].style.transform = `translatey(calc(var(--clock-height) * -${d} + 1px))`;
+        digits[i].style.setProperty("--factor", ((Math.random() - 0.5) * 2).toFixed(2));
+      }
 
-      if (prevTime) {
+      if (prevTime && numbersCache[i][prevTime[i]]) {
         numbersCache[i][prevTime[i]].classList.remove("active");
       }
 
-      numbersCache[i][d].classList.add("active");
+      if (numbersCache[i][d]) {
+        numbersCache[i][d].classList.add("active");
+      }
 
       let pos = d * -1;
       numbersCache[i].forEach((num) => {
@@ -104,8 +112,10 @@ function setFormat(newFormat) {
   FORMAT = parseInt(newFormat);
   prevPeriod = null;
   document.documentElement.dataset.format = newFormat;
-  toggleFormatBtn.innerText = FORMAT === 12 ? "24" : "12";
-  toggleFormatBtn.title = `Switch to ${FORMAT === 12 ? "24" : "12"}-hour format`;
+  if (toggleFormatBtn) {
+    toggleFormatBtn.innerText = FORMAT === 12 ? "24" : "12";
+    toggleFormatBtn.title = `Switch to ${FORMAT === 12 ? "24" : "12"}-hour format`;
+  }
   localStorage.setItem("format", newFormat);
 }
 
@@ -129,7 +139,7 @@ function setTheme(newTheme) {
 
 function setVariant(newVariant) {
   document.documentElement.dataset.variant = newVariant;
-  variantSelectEl.value = newVariant;
+  if (variantSelectEl) variantSelectEl.value = newVariant;
   localStorage.setItem("variant", newVariant);
 
   const color = THEME_COLORS[newVariant];
@@ -165,15 +175,17 @@ function getForegroundColor(color) {
 function setColor(newColor) {
   document.documentElement.style.setProperty("--accent-color-rgb", hexToRgb(newColor));
   document.documentElement.style.setProperty("--foreground-accent-color", getForegroundColor(newColor));
-  colorPickerEl.value = newColor;
+  if (colorPickerEl) colorPickerEl.value = newColor;
   localStorage.setItem("color", newColor);
 
-  if (colorPickerEl.value !== THEME_COLORS[variantSelectEl.value]) {
-    colorPickerEl.classList.remove("single");
-    resetColorBtn.style.display = "inline-block";
-  } else {
-    colorPickerEl.classList.add("single");
-    resetColorBtn.style.display = "none";
+  if (colorPickerEl && variantSelectEl) {
+    if (colorPickerEl.value !== THEME_COLORS[variantSelectEl.value]) {
+      colorPickerEl.classList.remove("single");
+      if (resetColorBtn) resetColorBtn.style.display = "inline-block";
+    } else {
+      colorPickerEl.classList.add("single");
+      if (resetColorBtn) resetColorBtn.style.display = "none";
+    }
   }
 }
 
@@ -198,30 +210,40 @@ function main() {
   startTime();
   setInterval(startTime, 1000);
 
-  toggleThemeBtn.addEventListener("click", () => {
-    const newTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-  });
+  if (toggleThemeBtn) {
+    toggleThemeBtn.addEventListener("click", () => {
+      const newTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+      setTheme(newTheme);
+    });
+  }
 
-  toggleFormatBtn.addEventListener("click", () => {
-    const newFormat = document.documentElement.dataset.format === "12" ? "24" : "12";
-    formats.forEach((n) => n.classList.remove("active"));
-    formatEl.style.transform = `translatey(0px)`;
-    setFormat(newFormat);
-  });
+  if (toggleFormatBtn) {
+    toggleFormatBtn.addEventListener("click", () => {
+      const newFormat = document.documentElement.dataset.format === "12" ? "24" : "12";
+      if (formats.length > 0) formats.forEach((n) => n.classList.remove("active"));
+      if (formatEl) formatEl.style.transform = `translatey(0px)`;
+      setFormat(newFormat);
+    });
+  }
 
-  resetColorBtn.addEventListener("click", () => {
-    const variant = document.documentElement.dataset.variant || "default";
-    if (variant in THEME_COLORS) {
-      setColor(THEME_COLORS[variant]);
-    }
-  });
+  if (resetColorBtn) {
+    resetColorBtn.addEventListener("click", () => {
+      const variant = document.documentElement.dataset.variant || "default";
+      if (variant in THEME_COLORS) {
+        setColor(THEME_COLORS[variant]);
+      }
+    });
+  }
 
-  variantSelectEl.addEventListener("input", (e) => setVariant(e.target.value));
+  if (variantSelectEl) {
+    variantSelectEl.addEventListener("input", (e) => setVariant(e.target.value));
+  }
 
-  colorPickerEl.addEventListener("input", (e) => {
-    setColor(e.target.value);
-  });
+  if (colorPickerEl) {
+    colorPickerEl.addEventListener("input", (e) => {
+      setColor(e.target.value);
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", main);
