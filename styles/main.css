@@ -111,6 +111,19 @@ body {
   z-index: 0;
 }
 
+/* Decorative blob left */
+.hero-blob {
+  position: absolute;
+  top: 50%;
+  left: -6rem;
+  transform: translateY(-50%);
+  width: min(380px, 40vw);
+  color: var(--accent-color);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
