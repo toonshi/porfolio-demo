@@ -15,19 +15,29 @@
 </head>
 
 <body>
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="nav-brand">
       <a href="index.html" class="brand-link">MA</a>
     </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="#about">About</a>
-      <button id="nav-theme-btn" title="Toggle dark mode">Dark</button>
+      <button id="nav-theme-btn" aria-label="Switch to dark mode">Dark</button>
     </div>
   </nav>
+
+  <main id="main-content">
 
   <!-- Hero Section -->
   <section id="hero">
@@ -99,9 +109,9 @@
         <span class="clock-label">Live Clock</span>
 
         <div class="clock-controls">
-          <button id="theme-btn" title="Toggle dark mode">Dark</button>
-          <button id="toggle-format" title="Switch to 12-hour format">12</button>
-          <select id="variant-select" title="Clock style">
+          <button id="theme-btn" aria-label="Switch to dark mode">Dark</button>
+          <button id="toggle-format" aria-label="Switch to 12-hour format">12</button>
+          <select id="variant-select" aria-label="Clock style">
             <option value="default">Default</option>
             <option value="cards">Cards</option>
             <option value="cogs">Cogs</option>
@@ -112,8 +122,8 @@
             <option value="photo">Photo</option>
           </select>
           <span class="color-control">
-            <input type="color" id="color-picker" value="#ffaacc" title="Accent colour" class="single">
-            <button id="reset-color" style="display:none" title="Reset colour">↺</button>
+            <input type="color" id="color-picker" value="#ffaacc" aria-label="Accent colour" class="single">
+            <button id="reset-color" style="display:none" aria-label="Reset colour">↺</button>
           </span>
         </div>
 
@@ -321,6 +331,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
@@ -336,6 +348,7 @@
   </footer>
 
   <script src="scripts/theme.js"></script>
+  <script src="scripts/nav.js"></script>
   <script src="scripts/clock.js"></script>
 </body>
 
