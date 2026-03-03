@@ -136,6 +136,58 @@ body {
   z-index: 1;
 }
 
+.hero-text {
+  position: relative;
+}
+
+.text-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  color: var(--accent-color);
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-text-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.light-only {
+  display: block;
+}
+
+.dark-only {
+  display: none;
+}
+
+[data-theme="dark"] .light-only {
+  display: none;
+}
+
+[data-theme="dark"] .dark-only {
+  display: block;
+}
+
 .hero-label {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
