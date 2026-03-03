@@ -15,19 +15,29 @@
 </head>
 
 <body>
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="nav-brand">
       <a href="index.html" class="brand-link">MA</a>
     </div>
-    <div class="nav-links">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="index.html#about">About</a>
-      <button id="nav-theme-btn" title="Toggle dark mode">Dark</button>
+      <button id="nav-theme-btn" aria-label="Switch to dark mode">Dark</button>
     </div>
   </nav>
+
+  <main id="main-content">
 
   <!-- Projects Section -->
   <section id="projects" style="padding-top: 4rem;">
@@ -118,6 +128,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
@@ -133,6 +145,7 @@
   </footer>
 
   <script src="scripts/theme.js"></script>
+  <script src="scripts/nav.js"></script>
 </body>
 
 </html>
