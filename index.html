@@ -1,69 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-format="24" data-variant="default" data-theme="light">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Michael Agoya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Agoya — Developer & Designer</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="styles/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/clock.css">
 </head>
 
 <body>
-	<!-- Navbar -->
-	<nav class="navbar">
-		<div>
-			<a href="index.html">Home</a>
-			<a href="projects.html">Projects</a>
-			<a href="skills.html">Projects</a>
-			<a href="#about">About Me</a>
-		</div>
-	</nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">MA</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-	<!-- Home Section -->
-	<section id="feature">
-		<div id="content">
-			<header>
-				<h2>Michael Agoya</h2>
-				<p class="large">Showcasing My Journey in Tech, Development, and Design</p>
-				<p>Welcome to my portfolio! Explore my projects, skills, and experiences as I navigate the exciting world of tech and development. Whether it's coding, designing, or problem-solving, I'm passionate about creating impactful solutions.</p>
-			</header>
-			<a href="https://linkedin.com/in/mikeagoya" class="cta">Connect on LinkedIn</a>
-		</div>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
 
-		<div id="grid">
-			<div>
-				<h3>Project Highlights</h3>
-				<p>Explore my top projects, from web applications, to AI-driven solutions.</p>
-				<a href="projects.html" class="page-btn">View Projects</a>
-			</div>
-			<div>
-				<h3>Technical Skills</h3>
-				<p>Java, Django, JavaScript, Python, SQL,Blender and more. See my expertise in action.</p>
-        <a href="skills.html" class="page-btn">View Skills</a>
-			</div>
-			<div>
-				<h3>Writing Portfolio</h3>
-				<p>Check out my technical articles, where I break down complex topics and share insights.</p>
-        <a href="https://medium.com/@agoyamike" class="page-btn">Go to Medium</a>
-			</div>
-			<div>
-				<h3>Hackathon Experience</h3>
-				<p>Read about my journey through various hackathons</p>
-        <a href="projects.html" class="page-btn">View projects</a>
-			</div>
-		</div>
-	</section>
+      <div class="hero-text">
+        <span class="hero-label">Hello, I'm</span>
+        <h1>Michael Agoya</h1>
+        <p class="hero-subtitle">CS Student · Developer · Creative</p>
+        <p class="hero-desc">
+          Building impactful solutions through code, design, and curiosity.
+          From blockchain platforms to accessibility tools — I'm passionate
+          about technology that makes a real difference.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="cta-primary">View Projects</a>
+          <a href="https://linkedin.com/in/mikeagoya" class="cta-secondary" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
 
-	<!-- About Me Section -->
-	<section id="about">
-		<header>
-			<h2>About Me</h2>
-			<p>Hello! I'm Michael, a second-year Computer Science student passionate about technology and development. I love turning ideas into reality through code and am always eager to learn and explore new tools and technologies.</p>
-			<a href="mailto:agoyamike@gmail.com" class="cta">Get in Touch</a>
-		</header>
-	</section>
+      <!-- Clock Widget -->
+      <div class="hero-clock">
+        <span class="clock-label">Live Clock</span>
+
+        <div class="clock-controls">
+          <button id="theme-btn" title="Toggle dark mode">Dark</button>
+          <button id="toggle-format" title="Switch to 12-hour format">12</button>
+          <select id="variant-select" title="Clock style">
+            <option value="default">Default</option>
+            <option value="cards">Cards</option>
+            <option value="cogs">Cogs</option>
+            <option value="cylinder">Cylinder</option>
+            <option value="iphone">iPhone</option>
+            <option value="memories">Memories</option>
+            <option value="caterpillars">Caterpillars</option>
+            <option value="photo">Photo</option>
+          </select>
+          <span class="color-control">
+            <input type="color" id="color-picker" value="#ffaacc" title="Accent colour" class="single">
+            <button id="reset-color" style="display:none" title="Reset colour">↺</button>
+          </span>
+        </div>
+
+        <div class="clock-wrap">
+          <div class="clock">
+            <!-- Hours tens -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <!-- Hours units -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <div class="spacer">:</div>
+            <!-- Minutes tens -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <!-- Minutes units -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <div class="spacer">:</div>
+            <!-- Seconds tens -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <!-- Seconds units -->
+            <div class="col digit">
+              <span><span>0</span></span>
+              <span><span>1</span></span>
+              <span><span>2</span></span>
+              <span><span>3</span></span>
+              <span><span>4</span></span>
+              <span><span>5</span></span>
+              <span><span>6</span></span>
+              <span><span>7</span></span>
+              <span><span>8</span></span>
+              <span><span>9</span></span>
+            </div>
+            <!-- AM/PM (12h mode only) -->
+            <div class="spacer format-spacer"></div>
+            <div class="col format">
+              <span><span>AM</span></span>
+              <span><span>PM</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">CS Student with a Builder's Mindset</h2>
+          <p>
+            Hi! I'm Michael — a Computer Science student based in Kenya with a deep passion
+            for building things that matter. I thrive at the intersection of technology,
+            design, and social impact.
+          </p>
+          <p>
+            My work spans blockchain (ICP), web development, AI tooling, accessibility apps,
+            and 3D / motion graphics. When I'm not coding I'm probably writing on Medium or
+            experimenting in Blender.
+          </p>
+          <div class="about-links">
+            <a href="mailto:agoyamike@gmail.com" class="cta-primary">Get in Touch</a>
+            <a href="https://medium.com/@agoyamike" class="cta-secondary" target="_blank" rel="noopener">Medium ↗</a>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Languages & stacks</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Hackathons</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Things to learn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-inner">
+      <span class="section-label">Selected Work</span>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-desc">
+        A handful of things I've built — from blockchain equity platforms to
+        accessibility apps and creative web experiments.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Mshamba -->
+        <div class="project-card">
+          <span class="project-tag">Blockchain · ICP · JavaScript</span>
+          <h3>Mshamba</h3>
+          <p>
+            The NASDAQ for Kenyan farms. A decentralised platform that lets
+            farmers tokenize equity and raise capital from global investors via
+            M-Pesa and crypto — no bank loans required. Live on ICP mainnet.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/mshamba" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://pri4n-hyaaa-aaaac-a4beq-cai.icp0.io/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- BrightSteps -->
+        <div class="project-card">
+          <span class="project-tag">Accessibility · Python · Web</span>
+          <h3>BrightSteps</h3>
+          <p>
+            An accessibility-first web application developed with the
+            Ability-allies team as part of a DSTV hackathon challenge.
+            Focused on improving digital inclusion for users with disabilities.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/Ability-allies/DSTV" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://toonshi.github.io/brightSteps/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- Vertical Clock -->
+        <div class="project-card">
+          <span class="project-tag">CSS · JavaScript · Creative</span>
+          <h3>Vertical Clock</h3>
+          <p>
+            A creative animated clock widget with 7 visual variants — cards,
+            cogs, cylinders, memories, caterpillars, and more. You're looking
+            at it right now in the hero above!
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/porfolio-demo" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="projects.html" class="cta-secondary">See all projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">MA</span>
+      <div class="footer-links">
+        <a href="https://github.com/toonshi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mikeagoya" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@agoyamike" target="_blank" rel="noopener">Medium</a>
+        <a href="mailto:agoyamike@gmail.com">Email</a>
+      </div>
+      <span class="footer-copy">© 2025 Michael Agoya</span>
+    </div>
+  </footer>
+
+  <script src="scripts/clock.js"></script>
 </body>
 
 </html>

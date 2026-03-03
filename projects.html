@@ -1,84 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-format="24" data-variant="default" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Life is one big project</title>
-
+  <title>Projects — Michael Agoya</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/clock.css">
 </head>
-
 
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div>
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">MA</a>
+    </div>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="#about">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="index.html#about">About</a>
     </div>
   </nav>
 
-
   <!-- Projects Section -->
-  <section id="projects">
-    <header>
-      <h2>My Projects</h2>
-    </header>
+  <section id="projects" style="padding-top: 4rem;">
+    <div class="section-inner">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">All Projects</h2>
+      <p class="section-desc">
+        Here's everything I've built — blockchain apps, accessibility tools,
+        web experiments, and more.
+      </p>
 
+      <div class="projects-grid" style="margin-top:2.5rem;">
 
-    <div id="project-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>A detailed project description goes here.</p>
-        <div class="project-buttons">
-          <a href="https://github.com/Ability-allies/DSTV" class="page-btn">GitHub</a>
-          <a href="https://toonshi.github.io/brightSteps/" class="page-btn">Check it Out</a>
+        <!-- Mshamba -->
+        <div class="project-card">
+          <span class="project-tag">Blockchain · ICP · JavaScript · Motoko · Rust</span>
+          <h3>Mshamba</h3>
+          <p>
+            The NASDAQ for Kenyan farms. A decentralised agricultural equity
+            tokenization platform on the Internet Computer. Farmers tokenize
+            equity, raise capital via M-Pesa or crypto, and investors get
+            tradable tokens with dividend rights. Live on ICP mainnet.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/mshamba" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://pri4n-hyaaa-aaaac-a4beq-cai.icp0.io/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+          </div>
         </div>
-      </div>
 
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Ecommerce platform</p>
-        <div class="project-buttons">
-          <a href="https://github.com/toonshi" class="page-btn">GitHub</a>
-          <a href="project1.html" class="page-btn">Check it Out</a>
+        <!-- BrightSteps -->
+        <div class="project-card">
+          <span class="project-tag">Accessibility · Python · Web</span>
+          <h3>BrightSteps</h3>
+          <p>
+            Accessibility-first web application built with the Ability-Allies
+            team for a DSTV hackathon. Focuses on improving digital inclusion
+            and usability for people with disabilities, featuring adaptive
+            interfaces and assistive features.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/Ability-allies/DSTV" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://toonshi.github.io/brightSteps/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+          </div>
         </div>
-      </div>
 
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>Coming soon.</p>
-        <div class="project-buttons">
-          <a href="https://github.com/your-project-repo3" class="page-btn">GitHub</a>
-          <a href="project1.html" class="page-btn">Check it Out</a>
+        <!-- BrightSteps Edu -->
+        <div class="project-card">
+          <span class="project-tag">Education · HTML · Web</span>
+          <h3>BrightSteps Edu</h3>
+          <p>
+            An educational platform extending the BrightSteps accessibility
+            mission into learning. Designed to make educational content more
+            accessible and engaging for students with diverse needs.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/brightsteps_edu" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
         </div>
+
+        <!-- Vertical Clock -->
+        <div class="project-card">
+          <span class="project-tag">CSS · JavaScript · Creative</span>
+          <h3>Vertical Clock</h3>
+          <p>
+            A playful animated clock widget with 7 distinct visual variants:
+            Default, Cards (playing card flip), Cogs, Cylinder, iPhone, Memories
+            (Polaroid photos), and Caterpillars. Fully customisable accent colour
+            and 12/24h format support.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/porfolio-demo" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="index.html" class="project-btn">See it Live ↗</a>
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="project-card">
+          <span class="project-tag">HTML · CSS · Design</span>
+          <h3>This Portfolio</h3>
+          <p>
+            A clean, light-mode personal portfolio built with vanilla HTML, CSS,
+            and JavaScript. Features the interactive Vertical Clock widget,
+            responsive design, and a dark mode toggle.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/porfolio-demo" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
       </div>
-
-
-      <!-- Additional project cards can go here -->
     </div>
   </section>
 
-
-  <!-- About Me Section -->
-  <section id="about">
-    <header>
-      <h2>About Me</h2>
-    </header>
-    <p>A brief description about yourself goes here. You can include your skills, experience, and any other relevant details.</p>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">MA</span>
+      <div class="footer-links">
+        <a href="https://github.com/toonshi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mikeagoya" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@agoyamike" target="_blank" rel="noopener">Medium</a>
+        <a href="mailto:agoyamike@gmail.com">Email</a>
+      </div>
+      <span class="footer-copy">© 2025 Michael Agoya</span>
+    </div>
+  </footer>
 </body>
-
 
 </html>
 

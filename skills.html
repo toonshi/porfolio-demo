@@ -1,120 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-format="24" data-variant="default" data-theme="light">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Technical Skills - Michael's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Michael Agoya</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="styles/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/clock.css">
 </head>
 
 <body>
-	<!-- Navbar -->
-	<nav class="navbar">
-		<div>
-			<a href="index.html">Home</a>
-			<a href="projects.html">Projects</a>
-			<a href="skills.html">Technical Skills</a>
-			<a href="#about">About Me</a>
-		</div>
-	</nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">MA</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </nav>
 
-	<!-- Technical Skills Section -->
-	<section id="technical-skills">
-		<div class="resume-section">
-			<a href="assets/Resume.pdf" download class="resume-btn">Download Resume</a>
-		</div>
+  <!-- Technical Skills Section -->
+  <section id="technical-skills">
+    <div class="section-inner">
+      <div class="resume-section">
+        <a href="assets/Resume.pdf" download class="resume-btn">Download Resume ↓</a>
+      </div>
 
-		<header>
-			<h2>Technical Skills</h2>
-		</header>
+      <span class="section-label">Toolkit</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-desc">
+        Languages, frameworks, and tools I use to build things.
+      </p>
 
-		<!-- Skills Grid -->
-		<div id="skills-grid">
-			<!-- Programming Languages -->
-			<div class="skills-card">
-				<h3><i class="fas fa-code"></i> Programming Languages</h3>
-				<ul>
-					<li>Python</li>
-					<li>JavaScript</li>
-					<li>Java</li>
-					<li>C++</li>
-					<li>Django</li>
-				</ul>
-			</div>
+      <!-- Skills Grid -->
+      <div id="skills-grid">
 
-			<!-- Web Development -->
-			<div class="skills-card">
-				<h3><i class="fas fa-laptop-code"></i> Web Development</h3>
-				<ul>
-					<li>HTML & CSS</li>
-					<li>React.js</li>
-					<li>Node.js</li>
-					<li>Flask</li>
-					<li>Bootstrap</li>
-				</ul>
-			</div>
+        <!-- Programming Languages -->
+        <div class="skills-card">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript / TypeScript</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>Motoko (ICP)</li>
+          </ul>
+        </div>
 
-			<!-- Tools & Frameworks -->
-			<div class="skills-card">
-				<h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
-				<ul>
-					<li>Git & GitHub</li>
-					<li>Visual Studio Code</li>
-					<li>Webpack</li>
-					<li>Postman</li>
-					<li>Heroku & Netlify</li>
-				</ul>
-			</div>
+        <!-- Web Development -->
+        <div class="skills-card">
+          <h3>Web Development</h3>
+          <ul>
+            <li>HTML &amp; CSS</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Django / Flask</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
 
-			<!-- Databases -->
-			<div class="skills-card">
-				<h3><i class="fas fa-database"></i> Databases</h3>
-				<ul>
-					<li>PostgreSQL</li>
-					<li>MySQL</li>
-					<li>SQLite</li>
-					<li>MongoDB</li>
-					<li>Firebase</li>
-				</ul>
-			</div>
+        <!-- Blockchain & Web3 -->
+        <div class="skills-card">
+          <h3>Blockchain &amp; Web3</h3>
+          <ul>
+            <li>Internet Computer (ICP)</li>
+            <li>Motoko</li>
+            <li>Rust (canisters)</li>
+            <li>ICRC-1 token standard</li>
+            <li>DeFi / tokenomics</li>
+          </ul>
+        </div>
 
-			<!-- DevOps & Cloud -->
-			<div class="skills-card">
-				<h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
-				<ul>
-					<li>Docker</li>
-					<li>AWS (EC2, S3)</li>
-					<li>Azure</li>
-					<li>Linux/WSL</li>
-					<li>CI/CD (GitHub Actions)</li>
-				</ul>
-			</div>
-			<div class="skills-card">
-				<h3><i class="fas fa-cloud"></i> Animation  &amp; 3d </h3>
-				<ul>
-					<li>Blender</li>
-					<li>Davinci Resolve<li>
-					<li>After Effects</li>
+        <!-- Tools & Frameworks -->
+        <div class="skills-card">
+          <h3>Tools &amp; Frameworks</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code</li>
+            <li>Postman</li>
+            <li>Webpack</li>
+            <li>Netlify / Heroku</li>
+          </ul>
+        </div>
 
-				</ul>
-			</div>
+        <!-- Databases -->
+        <div class="skills-card">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL / SQLite</li>
+            <li>MongoDB</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
 
-			<!-- Other Skills -->
-			<div class="skills-card">
-				<h3><i class="fas fa-brain"></i> Other Skills</h3>
-				<ul>
-					<li>Project Management</li>
-					<li>Agile Methodologies</li>
-					<li>Technical Writing</li>
-					<li>UI/UX Design</li>
-					<li>SEO Optimization</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+        <!-- DevOps & Cloud -->
+        <div class="skills-card">
+          <h3>DevOps &amp; Cloud</h3>
+          <ul>
+            <li>Docker</li>
+            <li>AWS (EC2, S3)</li>
+            <li>Azure</li>
+            <li>Linux / WSL</li>
+            <li>CI/CD (GitHub Actions)</li>
+          </ul>
+        </div>
+
+        <!-- Animation & 3D -->
+        <div class="skills-card">
+          <h3>Animation &amp; 3D</h3>
+          <ul>
+            <li>Blender</li>
+            <li>DaVinci Resolve</li>
+            <li>After Effects</li>
+            <li>CSS Animations</li>
+          </ul>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="skills-card">
+          <h3>Other Skills</h3>
+          <ul>
+            <li>Project Management</li>
+            <li>Agile Methodologies</li>
+            <li>Technical Writing</li>
+            <li>UI/UX Design</li>
+            <li>SEO Optimization</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">MA</span>
+      <div class="footer-links">
+        <a href="https://github.com/toonshi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mikeagoya" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@agoyamike" target="_blank" rel="noopener">Medium</a>
+        <a href="mailto:agoyamike@gmail.com">Email</a>
+      </div>
+      <span class="footer-copy">© 2025 Michael Agoya</span>
+    </div>
+  </footer>
 </body>
 
 </html>
