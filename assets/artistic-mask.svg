@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft background blob -->
+  <path d="M295,85Q355,170,330,265Q305,360,210,385Q115,410,60,325Q5,240,40,150Q75,60,175,38Q275,16,295,85Z"
+        fill="rgb(255,170,204)" opacity="0.18"/>
+
+  <!-- Portrait base circle -->
+  <circle cx="200" cy="190" r="128" fill="rgb(255,170,204)" opacity="0.18"/>
+
+  <!-- Shoulders / body -->
+  <path d="M112,295 Q156,255 200,248 Q244,255 288,295 Q305,352 200,366 Q95,352 112,295Z"
+        fill="rgb(255,150,190)" opacity="0.42"/>
+
+  <!-- Head -->
+  <circle cx="200" cy="165" r="58" fill="rgb(255,150,190)" opacity="0.45"/>
+
+  <!-- Minimal face marks -->
+  <circle cx="184" cy="160" r="5" fill="rgb(180,80,130)" opacity="0.55"/>
+  <circle cx="216" cy="160" r="5" fill="rgb(180,80,130)" opacity="0.55"/>
+  <path d="M188,178 Q200,188 212,178" fill="none" stroke="rgb(180,80,130)"
+        stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Decorative dashed ring -->
+  <circle cx="200" cy="190" r="150" fill="none" stroke="rgb(255,170,204)"
+          stroke-width="1.5" stroke-dasharray="6 12" opacity="0.5"/>
+
+  <!-- Outer subtle ring -->
+  <circle cx="200" cy="190" r="178" fill="none" stroke="rgb(255,170,204)"
+          stroke-width="1" stroke-dasharray="3 8" opacity="0.3"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="52"  cy="72"  r="4" fill="rgb(255,170,204)" opacity="0.65"/>
+  <circle cx="345" cy="85"  r="5" fill="rgb(255,170,204)" opacity="0.7"/>
+  <circle cx="355" cy="308" r="3" fill="rgb(255,170,204)" opacity="0.55"/>
+  <circle cx="42"  cy="292" r="4" fill="rgb(255,170,204)" opacity="0.6"/>
+
+  <!-- Monogram -->
+  <text x="200" y="380" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="13" font-weight="700" fill="rgb(200,100,150)"
+        opacity="0.75" letter-spacing="6">MA</text>
+  <line x1="148" y1="380" x2="163" y2="380" stroke="rgb(255,170,204)" stroke-width="1" opacity="0.5"/>
+  <line x1="237" y1="380" x2="252" y2="380" stroke="rgb(255,170,204)" stroke-width="1" opacity="0.5"/>
+</svg>
