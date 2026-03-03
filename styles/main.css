@@ -76,6 +76,21 @@ body {
   display: flex;
   align-items: center;
   padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative SVG background */
+.hero-deco {
+  position: absolute;
+  top: 50%;
+  right: -5rem;
+  transform: translateY(-50%);
+  width: min(420px, 42vw);
+  color: var(--accent-color);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content {
@@ -86,6 +101,8 @@ body {
   margin: 0 auto;
   width: 100%;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-label {
