@@ -58,11 +58,18 @@ body {
   letter-spacing: 0.05em;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 .nav-links a {
   color: var(--color);
   text-decoration: none;
   margin-left: 1.75rem;
   font-size: 0.875rem;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
@@ -681,5 +688,28 @@ h3 {
 
   .nav-links a {
     margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+
+  #nav-theme-btn {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .nav-links a {
+    margin-left: 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  #nav-theme-btn {
+    margin-left: 0.6rem;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.4rem;
   }
 }
