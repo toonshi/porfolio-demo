@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Michael Agoya</title>
 
+  <!-- Instant theme to prevent flash -->
+  <script>(function(){var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/clock.css">
@@ -22,6 +25,7 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="index.html#about">About</a>
+      <button id="nav-theme-btn" title="Toggle dark mode">Dark</button>
     </div>
   </nav>
 
@@ -66,20 +70,6 @@
           <div class="project-buttons">
             <a href="https://github.com/Ability-allies/DSTV" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
             <a href="https://toonshi.github.io/brightSteps/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
-          </div>
-        </div>
-
-        <!-- BrightSteps Edu -->
-        <div class="project-card">
-          <span class="project-tag">Education · HTML · Web</span>
-          <h3>BrightSteps Edu</h3>
-          <p>
-            An educational platform extending the BrightSteps accessibility
-            mission into learning. Designed to make educational content more
-            accessible and engaging for students with diverse needs.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/toonshi/brightsteps_edu" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
 
@@ -130,6 +120,8 @@
       <span class="footer-copy">© 2025 Michael Agoya</span>
     </div>
   </footer>
+
+  <script src="scripts/theme.js"></script>
 </body>
 
 </html>

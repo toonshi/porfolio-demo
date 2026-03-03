@@ -70,6 +70,24 @@ body {
   color: var(--accent-color);
 }
 
+#nav-theme-btn {
+  margin-left: 1.75rem;
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--color);
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#nav-theme-btn:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 /* ===== HERO ===== */
 #hero {
   min-height: calc(100vh - 65px);
