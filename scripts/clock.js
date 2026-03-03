@@ -119,9 +119,12 @@ function setMemories() {
 }
 
 function setTheme(newTheme) {
-  toggleThemeBtn.innerText = `${newTheme === "light" ? "Dark" : "Light"}`;
   document.documentElement.dataset.theme = newTheme;
   localStorage.setItem("theme", newTheme);
+  ["theme-btn", "nav-theme-btn"].forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) btn.textContent = newTheme === "light" ? "Dark" : "Light";
+  });
 }
 
 function setVariant(newVariant) {
@@ -176,7 +179,8 @@ function setColor(newColor) {
 
 function main() {
   const savedFormat = localStorage.getItem("format") || "24";
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   const savedVariant = localStorage.getItem("variant") || "default";
   const savedColor = localStorage.getItem("color") || "#ffaacc";
 
