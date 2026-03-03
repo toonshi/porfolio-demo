@@ -31,6 +31,45 @@
 
   <!-- Hero Section -->
   <section id="hero">
+
+    <!-- Decorative SVG background -->
+    <div class="hero-deco" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+        <!-- Outer dashed ring -->
+        <circle cx="250" cy="250" r="230" stroke="currentColor" stroke-width="1" stroke-dasharray="6 12"/>
+        <!-- Middle ring -->
+        <circle cx="250" cy="250" r="165" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 9"/>
+        <!-- Inner solid ring -->
+        <circle cx="250" cy="250" r="90" stroke="currentColor" stroke-width="2"/>
+        <!-- Center hub -->
+        <circle cx="250" cy="250" r="18" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="250" cy="250" r="8" fill="currentColor"/>
+        <!-- Hexagonal nodes on outer ring (6 points) -->
+        <circle cx="250" cy="20" r="7" fill="currentColor"/>
+        <circle cx="449" cy="135" r="7" fill="currentColor"/>
+        <circle cx="449" cy="365" r="7" fill="currentColor"/>
+        <circle cx="250" cy="480" r="7" fill="currentColor"/>
+        <circle cx="51"  cy="365" r="7" fill="currentColor"/>
+        <circle cx="51"  cy="135" r="7" fill="currentColor"/>
+        <!-- Spoke lines from center to outer nodes -->
+        <line x1="250" y1="250" x2="250" y2="20"  stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="250" y1="250" x2="449" y2="135" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="250" y1="250" x2="449" y2="365" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="250" y1="250" x2="250" y2="480" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="250" y1="250" x2="51"  y2="365" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="250" y1="250" x2="51"  y2="135" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+        <!-- Floating accent dots -->
+        <circle cx="140" cy="85"  r="4" fill="currentColor"/>
+        <circle cx="385" cy="75"  r="3" fill="currentColor"/>
+        <circle cx="435" cy="280" r="3" fill="currentColor"/>
+        <circle cx="360" cy="445" r="4" fill="currentColor"/>
+        <circle cx="100" cy="400" r="3" fill="currentColor"/>
+        <circle cx="60"  cy="230" r="3" fill="currentColor"/>
+        <!-- Rotated accent squares -->
+        <rect x="244" y="244" width="12" height="12" stroke="currentColor" stroke-width="1.5" transform="rotate(45 250 250)"/>
+      </svg>
+    </div>
+
     <div class="hero-content">
 
       <div class="hero-text">
