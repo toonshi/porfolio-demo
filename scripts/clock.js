@@ -202,17 +202,21 @@ function main() {
   startTime();
   setInterval(startTime, 1000);
 
-  toggleThemeBtn.addEventListener("click", () => {
-    const newTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-  });
+  if (toggleThemeBtn) {
+    toggleThemeBtn.addEventListener("click", () => {
+      const newTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+      setTheme(newTheme);
+    });
+  }
 
-  toggleFormatBtn.addEventListener("click", () => {
-    const newFormat = document.documentElement.dataset.format === "12" ? "24" : "12";
-    formats.forEach((n) => n.classList.remove("active"));
-    formatEl.style.transform = `translatey(0px)`;
-    setFormat(newFormat);
-  });
+  if (toggleFormatBtn) {
+    toggleFormatBtn.addEventListener("click", () => {
+      const newFormat = document.documentElement.dataset.format === "12" ? "24" : "12";
+      formats.forEach((n) => n.classList.remove("active"));
+      formatEl.style.transform = `translatey(0px)`;
+      setFormat(newFormat);
+    });
+  }
 
   resetColorBtn.addEventListener("click", () => {
     const variant = document.documentElement.dataset.variant || "default";
