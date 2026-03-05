@@ -44,5 +44,27 @@
         applyTheme(current === "dark" ? "light" : "dark", true);
       });
     }
+
+    // Sticky header scroll effect
+    var navbar = document.querySelector(".navbar");
+    if (navbar) {
+      function onScroll() {
+        if (window.scrollY > 10) {
+          navbar.classList.add("navbar--scrolled");
+        } else {
+          navbar.classList.remove("navbar--scrolled");
+        }
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll(); // apply on initial load in case page starts scrolled
+    }
+
+    // Flowers night garden background: start animations after a short delay
+    var flowerScene = document.querySelector(".flowers-bg");
+    if (flowerScene) {
+      setTimeout(function () {
+        flowerScene.classList.remove("not-loaded");
+      }, 500);
+    }
   });
 })();
