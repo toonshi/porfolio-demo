@@ -1,0 +1,83 @@
+/* ===== WATERCOLOR DAY SCENE ===== */
+
+#hero .watercolor-bg {
+  position: absolute;
+  inset: 0;
+  display: none; /* Hidden by default */
+  background-color: #e2d8d0;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/textured_paper_%402X.png);
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  background-size: 800px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+[data-theme="light"] #hero .watercolor-bg {
+  display: block;
+}
+
+#hero .watercolor-bg svg {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Squigglevision Effect */
+#hero .watercolor-bg #illustration {
+   animation: squigglevision 0.5s infinite alternate;
+}
+
+@keyframes squigglevision {
+  0%   { filter: url('#sketch-0'); }
+  25%  { filter: url('#sketch-1'); }
+  50%  { filter: url('#sketch-2'); }
+  75%  { filter: url('#sketch-3'); }
+  100% { filter: url('#sketch-4'); }
+}
+
+/* Paint Stroke Animation */
+#hero .watercolor-bg .path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+/* Start painting once .not-loaded is removed */
+#hero .watercolor-bg:not(.not-loaded) .path {
+  animation: paint 1.5s ease-in-out forwards;
+}
+
+#hero .watercolor-bg:not(.not-loaded) .path:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+#hero .watercolor-bg:not(.not-loaded) .path:nth-of-type(2) {
+  animation-delay: 1.5s;
+}
+
+@keyframes paint {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* Top + left fade for the watercolor paper edge */
+#hero .watercolor-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: 
+    linear-gradient(to bottom, var(--background) 0%, transparent 15%),
+    linear-gradient(to right,  var(--background) 0%, transparent 15%);
+}
+
+/* Pause animations if not loaded */
+#hero .watercolor-bg.not-loaded * {
+  animation-play-state: paused !important;
+}

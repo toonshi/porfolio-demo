@@ -66,5 +66,13 @@
         flowerScene.classList.remove("not-loaded");
       }, 500);
     }
+
+    // Watercolor day scene background: start paint animation after a short delay
+    var watercolorScene = document.querySelector(".watercolor-bg");
+    if (watercolorScene) {
+      setTimeout(function () {
+        watercolorScene.classList.remove("not-loaded");
+      }, 500);
+    }
   });
 })();
