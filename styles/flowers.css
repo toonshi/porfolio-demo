@@ -53,7 +53,7 @@
 /* ── Flowers wrapper ── */
 #hero .flowers-bg .flowers {
   position: relative;
-  transform: scale(0.9) translateX(55%);
+  transform: scale(0.9) translateX(70%);
 }
 
 /* ── Individual flower base ── */
