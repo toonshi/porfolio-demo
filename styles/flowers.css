@@ -2,13 +2,12 @@
 /* Adapted from "CSS Blossoming Flowers at Magical Night" by Aybuke Ceylan  */
 /* Original: https://codepen.io/ — inspiration by Yup Nguyen's artwork      */
 
-/* Background layer inside #hero — dark theme only */
+/* Background layer inside #hero — shown in both themes */
 #hero .flowers-bg {
   --dark-color: #1a1a2e;
   position: absolute;
   inset: 0;
-  /* hidden in light mode */
-  display: none;
+  display: none; /* hidden as a safe fallback until a data-theme is applied */
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
@@ -16,7 +15,8 @@
   perspective: 1000px;
 }
 
-[data-theme="dark"] #hero .flowers-bg {
+/* Show whenever a theme is active (always the case after the inline theme script runs) */
+[data-theme] #hero .flowers-bg {
   display: flex;
 }
 
@@ -645,4 +645,105 @@
 }
 @keyframes growing-grass-ans {
   0% { transform: scale(0); }
+}
+
+/* ===== LIGHT-THEME DAY GARDEN ===== */
+/* Show the same flower scene in light mode with a warm daytime palette */
+
+[data-theme="light"] #hero .flowers-bg {
+  /* Re-define --dark-color to the light page background.
+     All descendant elements use var(--dark-color) for blending/masking, so
+     this single variable swap makes every fade gradient merge into the light
+     background instead of the dark one. */
+  --dark-color: #fafafa;
+}
+
+/* Replace the night sky with a subtle soft sky gradient */
+[data-theme="light"] #hero .flowers-bg .night {
+  background-image:
+    radial-gradient(ellipse at top, #d4eeff 0%, #fafafa 60%),
+    radial-gradient(ellipse at bottom, #fafafa, rgba(255, 220, 180, 0.15));
+}
+
+/* Pink / cherry-blossom petals */
+[data-theme="light"] #hero .flowers-bg .flower__leaf {
+  background-color: #ffd6e7;
+  background-image: linear-gradient(to top, #e05c7a, #ffd6e7);
+  box-shadow: inset 0 0 2vmin rgba(220, 80, 110, 0.2);
+}
+[data-theme="light"] #hero .flowers-bg .flower__leaf--4 {
+  background-image: linear-gradient(to top, #d04070, #ffd6e7);
+}
+
+/* Soft pink glow under petals */
+[data-theme="light"] #hero .flowers-bg .flower__leafs::after {
+  background-color: #ffb3c8;
+}
+
+/* Warm amber sparkle lights (sunlit effect) */
+[data-theme="light"] #hero .flowers-bg .flower__light {
+  background-color: #ffb347;
+}
+[data-theme="light"] #hero .flowers-bg .flower__light:nth-child(odd) {
+  background-color: #ff85a1;
+}
+
+/* Green flower stems */
+[data-theme="light"] #hero .flowers-bg .flower__line {
+  background-image: linear-gradient(to top, transparent 10%, #3d8b42, #5cb860);
+}
+
+/* Green stem leaves */
+[data-theme="light"] #hero .flowers-bg .flower__line__leaf {
+  background-image: linear-gradient(to top, rgba(50, 120, 55, 0.4), #52ab57);
+  box-shadow: inset 0 0 2vmin rgba(60, 140, 65, 0.25);
+}
+
+/* Grass clumps — swap teal for green */
+[data-theme="light"] #hero .flowers-bg .flower__grass {
+  --c: #3d8b42;
+}
+
+/* Long centre grass blade */
+[data-theme="light"] #hero .flowers-bg .flower__g-long {
+  --c: #3d8b42;
+}
+
+/* Right arching leaf cluster */
+[data-theme="light"] #hero .flowers-bg .flower__g-right .leaf {
+  border-left-color: #3d8b42;
+  -webkit-mask-image: linear-gradient(to top, transparent 30%, #3d8b42 60%);
+}
+
+/* Front arching grass line */
+[data-theme="light"] #hero .flowers-bg .flower__g-front__line {
+  background-image: linear-gradient(to top, transparent, #3d8b42, transparent 100%);
+}
+
+/* Front-left leaf cluster */
+[data-theme="light"] #hero .flowers-bg .flower__g-front__leaf {
+  background-image:
+    linear-gradient(to bottom left, transparent, var(--dark-color)),
+    linear-gradient(to bottom right, #52ab57 50%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom right, #52ab57 50%, transparent 50%, transparent);
+  mask-image:         linear-gradient(to bottom right, #52ab57 50%, transparent 50%, transparent);
+  box-shadow: inset 0 2px 1vmin hsla(125, 45%, 65%, 0.2);
+}
+
+/* Front-right leaf cluster */
+[data-theme="light"] #hero .flowers-bg .flower__g-fr .leaf {
+  border-left-color: #3d8b42;
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, #3d8b42 50%);
+}
+[data-theme="light"] #hero .flowers-bg .flower__g-fr__leaf {
+  background-image:
+    linear-gradient(to bottom left, transparent, var(--dark-color) 98%),
+    linear-gradient(to bottom right, #52ab57 45%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(135deg, #52ab57 40%, transparent 50%, transparent);
+  box-shadow: inset 0 2px 1vmin hsla(125, 45%, 65%, 0.2);
+}
+
+/* Lighten the grass shadow overlay so it doesn't look heavy on a light background */
+[data-theme="light"] #hero .flowers-bg .flower__grass__overlay {
+  background-color: rgba(0, 0, 0, 0.12);
 }
