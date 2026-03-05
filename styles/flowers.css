@@ -10,8 +10,7 @@
   /* hidden in light mode */
   display: none;
   align-items: flex-end;
-  justify-content: flex-end;
-  padding-right: 4%;
+  justify-content: center;
   overflow: hidden;
   z-index: 0;
   perspective: 1000px;
@@ -55,6 +54,7 @@
 #hero .flowers-bg .flowers {
   position: relative;
   transform: scale(0.9);
+  margin-left: 20%;
 }
 
 /* ── Individual flower base ── */
