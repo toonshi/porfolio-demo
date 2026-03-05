@@ -10,7 +10,8 @@
   /* hidden in light mode */
   display: none;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 8%;
   overflow: hidden;
   z-index: 0;
   perspective: 1000px;
@@ -53,7 +54,7 @@
 /* ── Flowers wrapper ── */
 #hero .flowers-bg .flowers {
   position: relative;
-  transform: scale(0.9) translateX(70%);
+  transform: scale(0.9);
 }
 
 /* ── Individual flower base ── */
