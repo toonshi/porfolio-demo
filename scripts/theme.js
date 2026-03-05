@@ -58,5 +58,13 @@
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll(); // apply on initial load in case page starts scrolled
     }
+
+    // Flowers night scene: start animations after a short delay
+    var flowerScene = document.getElementById("flowers-scene");
+    if (flowerScene) {
+      setTimeout(function () {
+        flowerScene.classList.remove("not-loaded");
+      }, 500);
+    }
   });
 })();
