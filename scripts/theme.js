@@ -59,8 +59,8 @@
       onScroll(); // apply on initial load in case page starts scrolled
     }
 
-    // Flowers night scene: start animations after a short delay
-    var flowerScene = document.getElementById("flowers-scene");
+    // Flowers night garden background: start animations after a short delay
+    var flowerScene = document.querySelector(".flowers-bg");
     if (flowerScene) {
       setTimeout(function () {
         flowerScene.classList.remove("not-loaded");
