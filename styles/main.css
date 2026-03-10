@@ -206,9 +206,36 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: #333;
   display: block;
   margin-bottom: 0.5rem;
+  position: relative;
+  width: fit-content;
+  padding: 3px 10px;
+}
+
+.hero-label::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 3px 5px 3px 5px;
+  rotate: 0.5deg;
+  transform: skew(5deg);
+  --mark-color: 255 100 185;
+  --mark-bg-angle: 150deg;
+  background:
+    conic-gradient(at 0 100%, rgb(var(--mark-color) / 100%) 1%, #fff0 3%) no-repeat 0 0 / auto 120%,
+    conic-gradient(from 180deg at 100% 0, #fff0, rgb(var(--mark-color) / 100%) 1%, #fff0 4%) no-repeat 100% 100% / auto 120%,
+    linear-gradient(var(--mark-bg-angle), rgb(var(--mark-color) / 60%), rgb(var(--mark-color) / 20%) 75%, rgb(var(--mark-color) / 55%)) no-repeat center / auto;
+}
+
+[data-theme="dark"] .hero-label {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .hero-label::before {
+  display: none;
 }
 
 .hero-text h1 {
