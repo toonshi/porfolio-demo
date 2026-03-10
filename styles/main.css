@@ -255,10 +255,14 @@ body {
 
 .hero-desc {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #4b5563;
   margin: 0 0 2rem;
   max-width: 38ch;
   line-height: 1.8;
+}
+
+[data-theme="dark"] .hero-desc {
+  color: var(--muted);
 }
 
 .hero-actions {
