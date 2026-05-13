@@ -1,8 +1,8 @@
 /* ===== FLOWERS NIGHT SCENE ===== */
 /* Adapted from "CSS Blossoming Flowers at Magical Night" by Aybuke Ceylan  */
-/* Original: https://codepen.io/ — inspiration by Yup Nguyen's artwork      */
+/* Original: https://codepen.io/ - inspiration by Yup Nguyen's artwork      */
 
-/* Background layer inside #hero — dark theme only */
+/* Background layer inside #hero - dark theme only */
 #hero .flowers-bg {
   --dark-color: #1a1a2e;
   position: absolute;

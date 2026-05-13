@@ -1,4 +1,4 @@
-// Global theme management — works on every page
+// Global theme management - works on every page
 (function () {
   function getPreferredTheme() {
     var saved = localStorage.getItem("theme");
