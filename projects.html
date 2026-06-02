@@ -11,7 +11,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/clock.css">
 </head>
 
 <body>
@@ -30,87 +29,40 @@
   </nav>
 
   <!-- Projects Section -->
-  <section id="projects" style="padding-top: 4rem;">
+  <section id="projects">
     <div class="section-inner">
       <span class="section-label">Portfolio</span>
       <h2 class="section-title">All Projects</h2>
       <p class="section-desc">
-        Selected systems I architected and deployed across fintech, AI, and
-        indoor spatial intelligence.
+        Systems I have architected and deployed across fintech, AI, indoor spatial
+        intelligence, and social impact.
       </p>
 
-      <div class="projects-grid" style="margin-top:2.5rem;">
-
+      <div class="projects-grid">
 
         <!-- Mshamba -->
         <div class="project-card">
-          <span class="project-tag">Fintech · Daraja API · ICP · Rust · Trust Systems</span>
+          <span class="project-tag">Fintech · ICP · Motoko · Rust</span>
           <h3>Mshamba</h3>
           <p>
-            Developed secure escrow-oriented fintech workflows and advanced farm equity
-            tokenization architecture on the Internet Computer Protocol (ICP) to
-            strengthen trust in agricultural investment flows.
+            An agricultural equity tokenization platform that turns Kenyan farms into
+            on-chain investable assets. Built the Motoko backend and Rust token factory
+            on the Internet Computer, with escrow-oriented investment flows. Live on mainnet.
           </p>
           <div class="project-buttons">
             <a href="https://github.com/toonshi/mshamba" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="https://mshamba.org" class="project-btn" target="_blank" rel="noopener">Live Platform ↗</a>
-          </div>
-        </div>
-
-        <!-- TFN (Tech for Nonprofits) -->
-        <div class="project-card">
-          <span class="project-tag">Social Impact · Android · Django · Next.js · GCP · Firebase</span>
-          <h3>TFN (Tech for Nonprofits)</h3>
-          <p>
-            A one-stop platform and Android app designed to connect tech volunteers with 
-            nonprofits. It streamlines project management, technical assessments, and 
-            volunteer coordination. I architected the Django REST API, built the Next.js 
-            dashboard, and developed the Android app (available on Google Play), 
-            leveraging GCP Cloud Run, Cloud SQL, and Firebase for push notifications.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/toonshi/tfn" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="https://play.google.com/store/apps/details?id=com.tfn.app" class="project-btn" target="_blank" rel="noopener">Play Store ↗</a>
-          </div>
-        </div>
-
-        <!-- Rooftop -->
-        <div class="project-card">
-          <span class="project-tag">Mental Health · Real-time Systems · LLMs · Vercel AI SDK</span>
-          <h3>Rooftop</h3>
-          <p>
-            A mental health-focused chatbot platform. Implemented real-time friend group
-            dynamics and integrated LLMs via the Vercel AI SDK to facilitate structured
-            peer support.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/toonshi/rooftop" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </div>
-
-        <!-- Sokoline -->
-        <div class="project-card">
-          <span class="project-tag">E-commerce · Django 6 · Next.js 16 · M-Pesa API · AI · DO App Service · CDN</span>
-          <h3>Sokoline</h3>
-          <p>
-            Architected a production marketplace platform with verified transactions,
-            Daraja payment integrations, and AI-assisted discovery workflows for
-            trustworthy digital commerce.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/toonshi/sokoline" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="https://sokoline.app" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+            <a href="https://pri4n-hyaaa-aaaac-a4beq-cai.icp0.io/" class="project-btn" target="_blank" rel="noopener">Live on ICP ↗</a>
           </div>
         </div>
 
         <!-- Navous -->
         <div class="project-card">
-          <span class="project-tag">Spatial Systems · Rust Positioning · 2.5D Mapping · Indoor Navigation</span>
+          <span class="project-tag">Spatial Systems · Rust · Next.js · PostGIS</span>
           <h3>Navous</h3>
           <p>
-            An indoor navigation platform utilizing a Rust-based positioning engine.
-            Engineered a 2.5D isometric map interface to handle complex indoor spatial
-            data where GPS fails.
+            An indoor navigation platform powered by a Rust positioning engine. Engineered
+            a vector-native mapping layer and a 2.5D isometric interface to handle complex
+            indoor spatial data where GPS fails.
           </p>
           <div class="project-buttons">
             <a href="https://github.com/toonshi/navous" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
@@ -118,35 +70,91 @@
           </div>
         </div>
 
-        <!-- BrightSteps Ecosystem -->
+        <!-- Tech for Nonprofits -->
         <div class="project-card">
-          <span class="project-tag">Accessibility · Education · Python · HTML · Web</span>
-          <h3>BrightSteps Ecosystem</h3>
+          <span class="project-tag">Social Impact · Android · Django · Next.js · GCP</span>
+          <h3>Tech for Nonprofits</h3>
           <p>
-            A suite of accessibility-first tools including a core web application for 
-            digital inclusion and an educational platform extension. Designed with 
-            the Ability-Allies team, it features adaptive interfaces and assistive 
-            features to make learning and digital navigation accessible for students 
-            with diverse needs.
+            A platform connecting tech volunteers with nonprofits, streamlining project
+            management and volunteer coordination. I built the Django REST API, the Next.js
+            dashboard, and an Android app, backed by Google Cloud Run, Cloud SQL, and Firebase.
           </p>
           <div class="project-buttons">
-            <a href="https://github.com/Ability-allies/DSTV" class="page-btn" target="_blank" rel="noopener">GitHub (App) ↗</a>
-            <a href="https://github.com/toonshi/brightsteps_edu" class="page-btn" target="_blank" rel="noopener">GitHub (Edu) ↗</a>
-            <a href="https://toonshi.github.io/brightSteps/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+            <a href="https://github.com/tfn-ke/tfn" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://nonprofits.live" class="project-btn" target="_blank" rel="noopener">Live Platform ↗</a>
+          </div>
+        </div>
+
+        <!-- Sokoline -->
+        <div class="project-card">
+          <span class="project-tag">E-commerce · Django · Next.js · M-Pesa · AI</span>
+          <h3>Sokoline</h3>
+          <p>
+            A production campus marketplace with verified transactions, Daraja (M-Pesa) and
+            GavaConnect payment integrations, and AI-assisted discovery, helping students do
+            business safely and legally.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/sokoline" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://sokoline.app" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- Mshamba Intelligence -->
+        <div class="project-card">
+          <span class="project-tag">ML · Python · PostgreSQL · Fintech</span>
+          <h3>Mshamba Intelligence</h3>
+          <p>
+            The intelligence backend behind Mshamba. A Python API for farm valuation using a
+            discounted cash flow model, risk-adjusted crop recommendations via Sharpe ratio,
+            and machine-learning yield prediction.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/farm-intelligence" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
 
         <!-- Rebot -->
         <div class="project-card">
-          <span class="project-tag">AI · JavaScript · Low-Code</span>
+          <span class="project-tag">AI · Low-Code · RAG</span>
           <h3>Rebot</h3>
           <p>
-            A low-code AI orchestration platform for building, deploying, and
-            automating generative AI pipelines. Features a visual drag-and-drop
-            builder, multi-agent workflows, and a RAG-powered knowledge base.
+            A low-code AI orchestration platform for building, deploying, and automating
+            generative AI pipelines. Features a visual drag-and-drop builder, multi-agent
+            workflows, and a RAG-powered knowledge base.
           </p>
           <div class="project-buttons">
             <a href="https://github.com/toonshi/rebot" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Pharmiliar -->
+        <div class="project-card">
+          <span class="project-tag">AI · Python · Healthcare</span>
+          <h3>Pharmiliar</h3>
+          <p>
+            An AI-powered medical advisory system that helps users understand conditions,
+            get localized recommendations, and estimate treatment costs through a price
+            prediction model tuned to the local healthcare context.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/toonshi/pharmiliar2.0" class="page-btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- BrightSteps Ecosystem -->
+        <div class="project-card">
+          <span class="project-tag">Accessibility · Education · Web</span>
+          <h3>BrightSteps Ecosystem</h3>
+          <p>
+            An accessibility-first suite built with the Ability-Allies team, including a core
+            web app for digital inclusion and an educational extension, with adaptive and
+            assistive interfaces for students with diverse needs.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/Ability-allies/DSTV" class="page-btn" target="_blank" rel="noopener">GitHub (App) ↗</a>
+            <a href="https://github.com/toonshi/brightsteps_edu" class="page-btn" target="_blank" rel="noopener">GitHub (Edu) ↗</a>
+            <a href="https://toonshi.github.io/brightSteps/" class="project-btn" target="_blank" rel="noopener">Live Demo ↗</a>
           </div>
         </div>
 
@@ -164,28 +172,11 @@
         <a href="https://medium.com/@agoyamike" target="_blank" rel="noopener">Medium</a>
         <a href="mailto:agoyamike@gmail.com">Email</a>
       </div>
-
-      <div class="clock-wrap footer-clock">
-        <div class="clock">
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="spacer">:</div>
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="spacer">:</div>
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="col digit"><span><span>0</span></span><span><span>1</span></span><span><span>2</span></span><span><span>3</span></span><span><span>4</span></span><span><span>5</span></span><span><span>6</span></span><span><span>7</span></span><span><span>8</span></span><span><span>9</span></span></div>
-          <div class="spacer format-spacer"></div>
-          <div class="col format"><span><span>AM</span></span><span><span>PM</span></span></div>
-        </div>
-      </div>
-
-      <span class="footer-copy">© 2025 Michael Agoya</span>
+      <span class="footer-copy">© 2026 Michael Agoya</span>
     </div>
   </footer>
 
   <script src="scripts/theme.js"></script>
-  <script src="scripts/clock.js"></script>
 </body>
 
 </html>
