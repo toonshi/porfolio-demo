@@ -1,0 +1,8 @@
+# Source photo (optimized version lives in assets/)
+/mike.jpg
+
+# Node / React (incoming migration)
+node_modules/
+dist/
+.DS_Store
+*.local
